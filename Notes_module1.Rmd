@@ -1,0 +1,12 @@
+---
+title: "Mooc recherche reproductible"
+output: html_notebook
+author: Alexandre Changenet
+---
+
+# Module 1: Cahier de notes, cahier de laboratoire
+
+## 1. Nous utilisons tous des cahiers de notes 
+
+## 2. Un aperçu historique de la prise de notes
+
