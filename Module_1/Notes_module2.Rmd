@@ -1,0 +1,51 @@
+---
+title: "Notes_module2"
+author: "A.Changenet"
+date: "30/03/2021"
+output: html_document
+---
+
+<!-- :Notes: --> <!-- :MOOC: --> <!-- :reproductible: --> <!-- :markdown: -->
+<!-- :logiciel libre: -->
+
+# Document computationnels 
+
+* Jupyter => Intégré au MOOC 
+* Rstudio => Syncrhoniser avec le gitlab 
+* OrgMode => Necessite emacs plus puissant, plus technique
+
+# Etudes discutées
+
+* Economie: politiques d'austérité s'appuyant sur des travaux non reproductibles cf sur [wiki](https://en.wikipedia.org/wiki/Growth_in_a_Time_of_Debt)
+* IRM fonctionnelle: Bennett 
+  * 40 000 études a refaire
+* fausse structures de protéines dans des bactéries: code qui a été propagée dans plusieurs groupes ... avec des conséquences.
+
+
+# Pourquoi est-ce difficile ? 
+ 
+* Sources et données 
+* Choix !
+
+Le cahier de labo peut nous aider 
+
+* L'ordinateur sources d'erreur. 
+* Manque de rigueur et d'organisation 
+
+# Doc computationnel 
+* l'article est la partie immergée de l'iceberg 
+* Doc Comp permet de voir l'autre partie de l'iceberg ! Verfi les calculs, reutiliser les travaux et corriger. 
+
+* On est encouragé a écrire des petits morceaux de code et expliquer les liaisons entre code entre toutes les zones.
+
+* Jupyter et rmarkdown parfois problématique du point de vu du rendu pour avoir exactrement ce que l'on souhaite (en pdf par exemple) (mais faisable)
+* Org mode lit direct le latex donc permets de faire ce que l'on veut. 
+
+
+## Rstudio 
+* Partage de doc: **Knit** et publish permet de l'envoyer sur les serveurs pou être accéder par les autres en html. 
+
+
+
+
+

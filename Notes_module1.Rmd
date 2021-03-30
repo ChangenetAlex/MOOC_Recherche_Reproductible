@@ -1,7 +1,10 @@
 ---
 title: "Mooc recherche reproductible"
-output: html_notebook
-author: Alexandre Changenet
+author: "Alexandre Changenet"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
 ---
 
 <!-- :Notes: --> <!-- :MOOC: --> <!-- :reproductible: --> <!-- :markdown: -->
@@ -44,7 +47,7 @@ Langage de balisage léger permets de:
 On peut facilmement introduire du `chasse fixe` pour du code par exemple
 
 <!-- Ceci est du commentaire -->
-Ici j'introduit une image de mon sosi ![sosi](https://static.blog4ever.com/2014/12/790899/artfichier_790899_8580879_202004145452109.jpg)
+Ici j'introduit une image de mon sosi ![sosi](/Users/alexandrechangenet/Google Drive/Cours/MOOC_Recherche_Reproductible/rudi.jpeg)
 
 
 * Une stratégie qui est souvent employée et qui fonctionne bien en pratique consiste à faire le gros du travail de rédaction d'un article ou d'un mémoire en `Markdown`. La rédaction terminée, le fichier est exporté au format docx (ou `LaTeX`) et des ajustements de mise en page sont alors effectués avec un logiciel de traitement de texte (ou un éditeur `LaTeX`).
@@ -68,7 +71,7 @@ Ici j'introduit une image de mon sosi ![sosi](https://static.blog4ever.com/2014/
 * Historique des fichiers sans mes démultiplier
 * Fusions facile
 Petite blague rigolote
-![xkcd](https://explainxkcd.com/wiki/images/4/4d/git.png)
+![xkcd](/Users/alexandrechangenet/Google Drive/Cours/MOOC_Recherche_Reproductible/git.png)
 
 * Git est explicite 
 * git add pour indiquer quelle modif on veut ajouter (equivalent cocher des trucs sur Rstudio)
@@ -131,7 +134,7 @@ Petite blague rigolote
 
 Here I will try to import a rds figure file, print it to a pdf file, and finally annotate it using the pdf_write_metadata function of the R package threadr
 
-```{r My first chunk,eval=TRUE, echo=TRUE}
+```{r My first chunk,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE}
 library(ggplot2)
 library(reshape2)
 library(patchwork)
@@ -149,12 +152,20 @@ nameVAR <- c(
   "logdbhJ.IMall.plot.mean",                        
   "logsp.mortality.plot.rate.yr",                 
   "Plotcat")
+
+PredVAR <- c(                                       ## Predictions to be on what part of the model ? 
+  "Predictedresp",                                  ##
+  "Predictedzprob",                                 ##
+  "Predictedmu",
+  "Predictedmulink",
+  "Predictedzlink")   
+
 ```
 
 
-```{r,eval=TRUE, echo=FALSE}
+```{r,echo=TRUE, include=FALSE}
 MyVAR <- nameVAR[3] # the one I want 
-A <- list.files(paste0("~/SynologyDrive/FUNDIV - NFI - Europe/Redaction/paper2/Figure.Simple.effect.pred/"),pattern = paste0(MyVAR,"*.rds$"),full.names = T)
+A <- list.files(paste0("~/SynologyDrive/FUNDIV - NFI - Europe/Redaction/paper2/Figure.Simple.effect.pred"),pattern = paste0(MyVAR,"*.rds$"),full.names = T)
 
 # Load only the first half 
 mapply(function(x,y){
@@ -174,7 +185,7 @@ save_plot(filename = paste0("~/Google Drive/Cours/MOOC_Recherche_Reproductible/"
           plot = pall,base_width = 8, base_height = 8, dpi = 300 ,units = "in",nrow=1,ncol=2)
 ```
 
-```{r,eval=TRUE, echo=FALSE}
+```{r,eval=TRUE, echo=FALSE,fig.dim = c(15, 15)}
 pall
 ```
 
