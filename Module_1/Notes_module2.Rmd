@@ -45,6 +45,8 @@ Le cahier de labo peut nous aider
 ## Rstudio 
 * Partage de doc: **Knit** et publish permet de l'envoyer sur les serveurs pou être accéder par les autres en html. 
 
+## Test 
+
 
 
 
